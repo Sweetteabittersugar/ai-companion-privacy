@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Companion Support</title>
+  <meta name="description" content="AI 伴侣隐私政策。本地优先、用户自带 Xiaomi MiMo 或 DeepSeek API Key。">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #faf9f6;
+      --text: #182026;
+      --muted: #5f6b76;
+      --line: #d9e1e7;
+      --accent: #315f72;
+      --surface: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101418;
+        --text: #eef3f6;
+        --muted: #aab6be;
+        --line: #2d3942;
+        --accent: #8fc7d9;
+        --surface: #161d23;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.68 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      padding: 18px 0;
+    }
+    .brand {
+      font-weight: 750;
+      letter-spacing: 0;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      text-align: right;
+    }
+    main {
+      padding: 42px 0 64px;
+    }
+    h1 {
+      font-size: 34px;
+      line-height: 1.2;
+      margin: 0 0 24px;
+      letter-spacing: 0;
+    }
+    h2 {
+      border-top: 1px solid var(--line);
+      font-size: 22px;
+      margin: 34px 0 12px;
+      padding-top: 28px;
+      letter-spacing: 0;
+    }
+    h3 {
+      font-size: 18px;
+      margin: 24px 0 8px;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 18px; padding-left: 22px; }
+    li { margin: 6px 0; }
+    a { color: var(--accent); }
+    code {
+      background: color-mix(in srgb, var(--line) 60%, transparent);
+      border-radius: 5px;
+      padding: 1px 5px;
+      font-size: 0.92em;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+      padding: 22px 0 36px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap top">
+      <div class="brand">AI 伴侣</div>
+      <div class="meta">Version 1.0.0<br>Local-first companion app</div>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>AI Companion Support</h1>
+<p>If you need help with AI Companion, use the support checklist below.</p>
+<h2>Before You Contact Support</h2>
+<ul>
+<li>Confirm you are using the current app version.</li>
+<li>Confirm your Xiaomi MiMo or DeepSeek API key is active.</li>
+<li>Confirm the selected model ID matches the provider account.</li>
+<li>If multiplayer is enabled, confirm the WebSocket URL uses <code>wss://</code> for public deployments.</li>
+</ul>
+<h2>Common Issues</h2>
+<h3>Provider Validation Fails</h3>
+<p>Open Settings, verify the provider is Xiaomi MiMo or DeepSeek, then re-enter the API key. AI Companion does not operate an account system and does not store provider keys on a project server.</p>
+<h3>Clear Local Data</h3>
+<p>Open Settings and use Clear all data. This removes local conversations, memories, personas, settings, age-gate state, local AI reply feedback, and saved provider keys from secure storage.</p>
+<h3>Export Data</h3>
+<p>Use Export data in Settings to create a local ZIP file. The export can include <code>safety-feedback.json</code> when you have marked local AI replies as inappropriate.</p>
+<h2>Privacy And Data Handling</h2>
+<p>Read the privacy policy at ../privacy/. AI requests go directly from your device to the provider you configured. AI Companion does not collect chat history, memories, personas, birth date, or API keys on a project server.</p>
+<h2>Contact</h2>
+<p>For release support, use the store review contact channel or the project issue tracker configured by the release owner. Include the app version, platform, provider name, model ID, and a short description of the problem. Do not include API keys.</p>
+  </main>
+  <footer>
+    <div class="wrap">AI 伴侣是开源、本地优先应用。用户自带 Xiaomi MiMo 或 DeepSeek API Key。</div>
+  </footer>
+</body>
+</html>
