@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 伴侣隐私政策</title>
+  <meta name="description" content="AI 伴侣隐私政策。本地优先、用户自带 Xiaomi MiMo 或 DeepSeek API Key。">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #faf9f6;
+      --text: #182026;
+      --muted: #5f6b76;
+      --line: #d9e1e7;
+      --accent: #315f72;
+      --surface: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101418;
+        --text: #eef3f6;
+        --muted: #aab6be;
+        --line: #2d3942;
+        --accent: #8fc7d9;
+        --surface: #161d23;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.68 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      padding: 18px 0;
+    }
+    .brand {
+      font-weight: 750;
+      letter-spacing: 0;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      text-align: right;
+    }
+    main {
+      padding: 42px 0 64px;
+    }
+    h1 {
+      font-size: 34px;
+      line-height: 1.2;
+      margin: 0 0 24px;
+      letter-spacing: 0;
+    }
+    h2 {
+      border-top: 1px solid var(--line);
+      font-size: 22px;
+      margin: 34px 0 12px;
+      padding-top: 28px;
+      letter-spacing: 0;
+    }
+    h3 {
+      font-size: 18px;
+      margin: 24px 0 8px;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 18px; padding-left: 22px; }
+    li { margin: 6px 0; }
+    a { color: var(--accent); }
+    code {
+      background: color-mix(in srgb, var(--line) 60%, transparent);
+      border-radius: 5px;
+      padding: 1px 5px;
+      font-size: 0.92em;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+      padding: 22px 0 36px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap top">
+      <div class="brand">AI 伴侣</div>
+      <div class="meta">Version 1.0.0<br>Local-first companion app</div>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>AI 伴侣隐私政策</h1>
+<p>生效日期：2026-06-30</p>
+<p>AI 伴侣是本地优先的开源 AI 陪伴应用。我们不运营业务服务器，不提供账号系统，也不采集用户数据。用户需要自行配置 Xiaomi MiMo 或 DeepSeek API Key，应用会从设备直接请求用户选择的 AI 服务。</p>
+<h2>我们不收集的数据</h2>
+<p>AI 伴侣不收集、不上传、不分析以下数据：</p>
+<ul>
+<li>聊天记录</li>
+<li>长期记忆和语义事实</li>
+<li>角色设定、角色库和人格配置</li>
+<li>出生日期、年龄验证状态和个人资料</li>
+<li>API Key</li>
+<li>设备通讯录、相册、定位、麦克风或摄像头数据</li>
+</ul>
+<h2>本地保存的数据</h2>
+<p>以下数据保存在用户设备本地：</p>
+<ul>
+<li>对话、消息和角色信息</li>
+<li>记忆、事实和人格设置</li>
+<li>年龄验证状态</li>
+<li>通知提醒开关、主题偏好等设置</li>
+</ul>
+<p>API Key 使用系统安全存储保存，例如 iOS Keychain 或 Android Keystore。清除所有数据时，应用会同时清除本地数据库、配置和安全存储中的 API Key。</p>
+<p>Android 版本会关闭系统自动备份，避免聊天、记忆、角色和设置被操作系统自动同步到云端备份。用户主动使用“导出数据”时，应用只会在本机生成 ZIP 文件，并交由系统分享面板处理。</p>
+<h2>AI 服务请求</h2>
+<p>当用户发送消息、生成角色或触发记忆整理时，应用会把完成该功能所需的上下文直接发送到用户选择的 AI provider：</p>
+<ul>
+<li>Xiaomi MiMo</li>
+<li>DeepSeek</li>
+</ul>
+<p>这些请求不经过 AI 伴侣项目服务器。对应 provider 对数据的处理方式由其服务条款和隐私政策约束。用户应自行确认所选 provider 是否符合自己的隐私要求。</p>
+<h2>联机功能</h2>
+<p>多人群聊和游戏功能需要用户配置 WebSocket 联机服务地址。启用后，房间消息会发送到用户选择的联机服务端，用于实时同步多人状态。单人 AI 陪伴功能不需要业务服务器。</p>
+<p>iOS 版本仅在用户配置局域网 WebSocket 地址时使用本地网络访问；Android 版本仅声明通知、震动、网络状态和生物识别等运行所需权限，不申请通讯录、相册、定位、麦克风或摄像头权限。</p>
+<h2>年龄验证</h2>
+<p>AI 伴侣仅限 18 岁以上用户使用。出生日期只在设备本地用于计算年龄，不上传、不保存完整生日。</p>
+<h2>数据导出和删除</h2>
+<p>用户可以在设置中导出本地数据 ZIP，也可以清除全部本地数据。清除操作会删除：</p>
+<ul>
+<li>对话和消息</li>
+<li>记忆和事实</li>
+<li>角色、人设和设置</li>
+<li>API Key</li>
+<li>年龄验证状态</li>
+<li>本地 AI 回复反馈记录</li>
+</ul>
+<p>用户长按 AI 回复并选择“标记不适当”时，应用只会在本机保存一条反馈记录，用于用户自行审查或导出。该反馈不会自动上传到 AI 伴侣项目服务器；导出数据时会包含 <code>safety-feedback.json</code>。</p>
+<h2>第三方 SDK 和网络出口</h2>
+<p>应用使用 Expo / React Native 生态组件提供本地存储、通知、分享和系统能力。网络出口通过静态审计限制为：</p>
+<ul>
+<li>已声明的 AI provider 域名</li>
+<li>用户配置的联机 WebSocket 地址</li>
+<li>用户主动点击打开的 provider 文档/注册链接</li>
+</ul>
+<h2>联系和开源审计</h2>
+<p>AI 伴侣是开源项目。用户可以审计源码、构建产物和网络出口，确认数据处理行为是否符合上述说明。</p>
+  </main>
+  <footer>
+    <div class="wrap">AI 伴侣是开源、本地优先应用。用户自带 Xiaomi MiMo 或 DeepSeek API Key。</div>
+  </footer>
+</body>
+</html>
